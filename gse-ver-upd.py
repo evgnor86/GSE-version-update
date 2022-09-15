@@ -5,7 +5,6 @@ import json
 def run(base_dir: str, version: str) -> None:
 
     dirs: list = [dir_name for dir_name in os.listdir(base_dir) if dir_name[0] != '.']
-    # print(json.dumps(dirs, indent=4))
 
     for dir_name in dirs:
         metadata = json.load(open(f'{base_dir}/{dir_name}/metadata.json'))
